@@ -4,13 +4,14 @@ public class MyBase extends Base {
 
 	@Override
 	public void service(String state) {
-		if( state.equals( "낮" ) ) {
-			day();
-		} else if(state.equals("오후")){
+		if(state.equals("오후"))
+		{
 			day2();
-		}else if(state.equals("밤")){
-			night();
+			return;
 		}
+		
+		super.service(state);
+		
 	}
 
 	@Override
